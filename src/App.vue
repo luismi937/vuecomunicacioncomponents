@@ -1,11 +1,20 @@
 <template>
 <!-- <PadreDeportes/> -->
-<PadreNumeros />
+<!-- <PadreNumeros /> -->
+ <!-- <ComicsComponent/>  -->
+  <!-- <seleccionMultiple /> -->
+  <sumaCheckBox />
 </template>
 
 <script>
+// import ComicsComponent from './components/ComicsComponent.vue';
+// import seleccionMultiple from './components/seleccionMultiple.vue'
+import sumaCheckBox from './components/sumaCheckBox.vue'
+
+
+
 // import PadreDeportes from './components/PadreDeportes.vue'
-import PadreNumeros from './components/PadreNumeros.vue'
+// import PadreNumeros from './components/PadreNumeros.vue'
 
 
 
@@ -14,8 +23,10 @@ export default {
   name: 'App',
   components: {
     // PadreDeportes,
-    PadreNumeros
-
+    // PadreNumeros
+    // ComicsComponent
+    // seleccionMultiple
+    sumaCheckBox
   }
 }
 </script>

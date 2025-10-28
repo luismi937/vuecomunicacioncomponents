@@ -1,0 +1,22 @@
+.rojo{
+    background-color: red;
+    color:white
+}
+.verde{
+    color: green;
+}
+img{
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px gray;
+    margin: 10px;
+}
+div#comics{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    float: left;
+}
