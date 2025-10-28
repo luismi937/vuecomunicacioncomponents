@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h2>✨ Ejemplo Checkbox ✨</h2>
+    <h2>💎 Ejemplo Checkbox</h2>
 
     <button class="btn" @click="generarCheckboxes">
       <span>🎲 Generar Checkbox</span>
@@ -45,7 +45,7 @@ export default {
       this.numeros = [];
       this.seleccionados = [];
       this.suma = 0;
-      const cantidad = Math.floor(Math.random() * 10) + 5; // entre 5 y 14
+      const cantidad = Math.floor(Math.random() * 10) + 5;
       for (let i = 0; i < cantidad; i++) {
         this.numeros.push(Math.floor(Math.random() * 100));
       }
@@ -58,86 +58,73 @@ export default {
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
 body {
-  background: radial-gradient(circle at top left, #0a0f24, #01030b);
+  background: radial-gradient(circle at top right, #c2e9fb, #a1c4fd);
+  font-family: "Poppins", sans-serif;
 }
 
 .container {
-  max-width: 480px;
-  margin: 80px auto;
-  padding: 40px 30px;
-  border-radius: 24px;
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 0 40px rgba(0, 200, 255, 0.1);
-  backdrop-filter: blur(15px);
-  color: #fff;
+  max-width: 500px;
+  margin: 70px auto;
+  padding: 45px 35px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  color: #2c3e50;
   text-align: center;
-  font-family: "Outfit", sans-serif;
   position: relative;
   overflow: hidden;
 }
 
-.container::before {
+.container::after {
   content: "";
   position: absolute;
-  top: -30%;
-  left: -30%;
-  width: 150%;
-  height: 150%;
+  inset: 0;
   background: radial-gradient(
-    circle at center,
-    rgba(0, 195, 255, 0.3),
+    circle at top left,
+    rgba(255, 255, 255, 0.4),
     transparent 70%
   );
   z-index: 0;
-  animation: pulse 6s infinite ease-in-out;
-}
-
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 0.7;
-  }
-  50% {
-    transform: scale(1.2);
-    opacity: 0.4;
-  }
 }
 
 h2 {
-  font-size: 2.3rem;
+  font-size: 2.4rem;
   font-weight: 700;
-  color: #00eaff;
-  text-shadow: 0 0 10px #00eaff, 0 0 30px #00aaff;
+  color: #0078ff;
   margin-bottom: 25px;
+  text-shadow: 0 2px 10px rgba(0, 120, 255, 0.3);
+  position: relative;
+  z-index: 2;
+}
+
+.btn {
+  background: linear-gradient(90deg, #007cf0, #00dfd8);
+  border: none;
+  color: white;
+  padding: 14px 36px;
+  border-radius: 35px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0, 223, 216, 0.6);
+  font-size: 1.1rem;
   z-index: 2;
   position: relative;
 }
 
-.btn {
-  border: none;
-  background: linear-gradient(90deg, #007cf0, #00dfd8, #007cf0);
-  color: white;
-  padding: 14px 36px;
-  border-radius: 40px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.4s ease;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
-  font-size: 1rem;
-  position: relative;
-  overflow: hidden;
-}
-
 .btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 40px rgba(0, 255, 255, 0.7);
+  transform: translateY(-2px);
+  background: linear-gradient(90deg, #00dfd8, #007cf0);
+  box-shadow: 0 8px 30px rgba(0, 223, 216, 0.8);
 }
 
 .checkboxes {
-  margin-top: 30px;
+  margin-top: 35px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -149,13 +136,23 @@ h2 {
 .checkbox-label {
   position: relative;
   cursor: pointer;
-  user-select: none;
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #cdeaff;
-  font-weight: 500;
-  letter-spacing: 0.5px;
+  background: white;
+  padding: 12px 22px;
+  border-radius: 18px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: #1e3d59;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  border: 2px solid transparent;
+}
+
+.checkbox-label:hover {
+  transform: translateY(-2px);
+  border-color: #00bfff;
+  box-shadow: 0 8px 20px rgba(0, 191, 255, 0.2);
 }
 
 .checkbox-label input {
@@ -163,29 +160,27 @@ h2 {
 }
 
 .custom-box {
-  width: 26px;
-  height: 26px;
-  border: 2px solid rgba(0, 234, 255, 0.7);
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 234, 255, 0.4);
-  transition: all 0.3s ease;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #007cf0;
+  border-radius: 6px;
+  transition: all 0.25s ease;
   position: relative;
 }
 
 .checkbox-label input:checked + .custom-box {
   background: linear-gradient(145deg, #00c6ff, #0072ff);
-  border-color: #00eaff;
-  box-shadow: 0 0 20px #00eaff;
+  box-shadow: 0 0 12px rgba(0, 114, 255, 0.6);
+  border-color: #007cf0;
 }
 
 .checkbox-label input:checked + .custom-box::after {
   content: "✔";
   color: white;
-  font-size: 16px;
+  font-size: 14px;
   position: absolute;
-  top: 2px;
-  left: 6px;
-  text-shadow: 0 0 8px white;
+  left: 4px;
+  top: 0;
 }
 
 .num {
@@ -193,22 +188,22 @@ h2 {
 }
 
 .result {
-  margin-top: 35px;
-  z-index: 2;
+  margin-top: 40px;
   position: relative;
+  z-index: 2;
 }
 
 .result p {
-  color: #aad8ff;
+  color: #3a3a3a;
   font-size: 1.1rem;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
+  font-weight: 500;
 }
 
 .result h3 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #00eaff;
-  text-shadow: 0 0 12px #00eaff, 0 0 40px #00aaff;
-  letter-spacing: 1px;
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #007cf0;
+  text-shadow: 0 0 15px rgba(0, 124, 240, 0.4);
 }
 </style>
