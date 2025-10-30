@@ -8,7 +8,7 @@
 
     <ul>
       <li v-for="sport in deportes" :key="sport">
-        <HijoDeporte
+        <HijoDeportes
           :nombredeporte="sport"
           v-on:seleccionarFavoritoParent="seleccionarFavoritoParent"
         />
@@ -18,13 +18,13 @@
 </template>
 
 <script>
-import HijoDeporte from "./HijoDeporte.vue";
+import HijoDeportes from "./HijoDeportes.vue";
 
 export default {
   name: "PadreDeportes",
 
   components: {
-    HijoDeporte,
+    HijoDeportes,
   },
 
   data() {

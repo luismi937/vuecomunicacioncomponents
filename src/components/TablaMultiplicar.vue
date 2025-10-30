@@ -1,7 +1,8 @@
 <template>
   <div>
     <h2>Tabla del {{ numero }}</h2>
-    <table border="1" cellpadding="5">
+
+    <table border="1" cellpadding="6">
       <tr>
         <th>Operación</th>
         <th>Resultado</th>
@@ -21,32 +22,20 @@ import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 
 const route = useRoute()
+
+// Obtenemos el parámetro "numero" desde la URL y lo convertimos a entero
 const numero = computed(() => parseInt(route.params.numero))
 </script>
 <style scoped>
-h2 {
-  color: #2c3e50;
-}
 table {
-  width: 50%;
-  margin-top: 1rem;
+  margin: auto;
   border-collapse: collapse;
 }
 th {
-  background-color: #42b983;
-  color: white;
+  background-color: #f2f2f2;
 }
 td, th {
-  padding: 0.5rem;
-  text-align: center;
+  padding: 8px 12px;
 }
-a {
-  display: inline-block;
-  margin-top: 1rem;
-  text-decoration: none;
-  color: #42b983;
-}
-a:hover {
-  text-decoration: underline;
-}
+
 </style>
