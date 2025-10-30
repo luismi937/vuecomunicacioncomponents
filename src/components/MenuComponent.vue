@@ -13,7 +13,7 @@ import MenuComponent from './MenuComponent.vue';
 export default {
   name: "MenuComponent",
   components: {
-    MenuComponent
+    MenuComponent,
   },
 
 
