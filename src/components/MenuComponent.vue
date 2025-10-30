@@ -5,6 +5,7 @@ menu component para la navegacion
       <li><router-link to="/">Deportes</router-link></li>
       <li><router-link to="/comics">comics</router-link></li>
       <li><router-link to="/numeros">Numeros</router-link></li>
+        <li><router-link to="/numerodoble">Numero Doble</router-link></li>
     </ul>
   </nav>
 </template>
