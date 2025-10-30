@@ -15,6 +15,9 @@ export default {
   components: {
     MenuComponent,
   },
+  data() {
+    return {};
+  },
 
 
 };
