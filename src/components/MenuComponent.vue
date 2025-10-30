@@ -4,19 +4,19 @@
       <li><router-link to="/">Deportes</router-link></li>
       <li><router-link to="/comics">comics</router-link></li>
       <li><router-link to="/numeros">Numeros</router-link></li>
-        <li><router-link to="/numerodoble">Numero Doble</router-link></li>
+        <li v-for="num in numeros" :key="num"><router-link :to="'/numerodoble/'+ num">Numero Doble {{ num }}</router-link></li>
     </ul>
   </nav>
 </template>
 <script>
-import MenuComponent from './MenuComponent.vue';
+
 export default {
   name: "MenuComponent",
-  components: {
-    MenuComponent,
-  },
+
   data() {
-    return {};
+    return {
+      numeros: [5, 10, 15, 20]
+    };
   },
 
 

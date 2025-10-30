@@ -3,13 +3,20 @@
 <!-- <PadreNumeros /> -->
  <!-- <ComicsComponent/>  -->
   <!-- <seleccionMultiple /> -->
-  <sumaCheckBox />
+  <!-- <sumaCheckBox /> -->
+   <!-- <MenuComponent />
+   <router-view></router-view> -->
+   <MenuTablaMultiplicar/>
+   <router-view></router-view>
 </template>
 
 <script>
+import MenuTablaMultiplicar from './components/MenuTablaMultiplicar.vue';
+
 // import ComicsComponent from './components/ComicsComponent.vue';
 // import seleccionMultiple from './components/seleccionMultiple.vue'
-import sumaCheckBox from './components/sumaCheckBox.vue'
+// import MenuComponent from './components/MenuComponent.vue';
+// import sumaCheckBox from './components/sumaCheckBox.vue'
 
 
 
@@ -26,7 +33,9 @@ export default {
     // PadreNumeros
     // ComicsComponent
     // seleccionMultiple
-    sumaCheckBox
+    // sumaCheckBox
+    // MenuComponent
+    MenuTablaMultiplicar
   }
 }
 </script>
