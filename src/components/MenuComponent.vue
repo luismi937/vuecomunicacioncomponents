@@ -9,8 +9,12 @@ menu component para la navegacion
   </nav>
 </template>
 <script>
+import MenuComponent from './MenuComponent.vue';
 export default {
   name: "MenuComponent",
+  components: {
+    MenuComponent
+  },
 
 
 };
