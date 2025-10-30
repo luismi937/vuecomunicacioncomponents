@@ -8,7 +8,8 @@ const myRoutes = [
     {path: "/" , component: PadreDeportes},
     {path: "/numerodoble/numero" , component: NumeroDoble},
     {path: "/comics" , component: ComicsComponent},
-    {path: "/numeros" , component: PadreNumeros}
+    {path: "/numeros" , component: PadreNumeros},
+    
 ];
 
 const router = createWebHistory({

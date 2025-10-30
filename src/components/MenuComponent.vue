@@ -1,4 +1,3 @@
-menu component para la navegacion
 <template>
   <nav>
     <ul id="menu">
